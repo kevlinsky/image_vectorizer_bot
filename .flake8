@@ -1,0 +1,35 @@
+[flake8]
+ignore = W503,C812,C815, C101
+select = E,W,F,I,C
+exclude =
+    # common
+    *.egg-info,
+    .git,
+    .tox,
+    .*py,
+    # our project
+    app,
+    build,
+    dist,
+    node_modules,
+    contrib,
+    requirements,
+    docs,
+    venv,
+    # django
+    */fixtures/*,
+    */migrations/*,
+    */*_migrations/*,
+    */templates/*,
+; flake8-coding
+accept-encodings = utf-8
+; McCabe cyclomatic complexity
+max-complexity = 7
+; flake8-tidy-imports
+banned-modules =
+    cStringIO = Use io.BytesIO or io.StringIO!
+    # csv = Use yplan.compat.csv instead!
+    # mock = Use unittest.mock!
+    StringIO = Use io.BytesIO or io.StringIO!
+    urllib.urlencode = Use six.moves.urllib.parse.urlencode!
+    urlparse = Use six.moves.urllib.parse!

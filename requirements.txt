@@ -1,0 +1,17 @@
+celery
+Django
+djangorestframework
+psycopg2
+redis
+flake8
+flake8-codeclimate
+flake8-coding
+flake8-isort
+flake8-tidy-imports
+flake8-commas
+isort
+requests
+django_celery_beat
+pillow
+scikit-image
+svgwrite
